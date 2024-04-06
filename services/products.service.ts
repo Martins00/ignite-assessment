@@ -1,4 +1,3 @@
-export const getProducts = async () => {
-    const { $apiClient } = useNuxtApp();
-    return $apiClient.get("/products");
-}
+import axios from "axios";
+
+export const apiBaseUrl = 'https://dummyjson.com'
