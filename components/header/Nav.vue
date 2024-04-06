@@ -2,9 +2,9 @@
     <div class="flex-1 flex justify-center gap-x-8 transition-all duration-300"
         :class="{ '-translate-y-20 scale-0': scrolledUp }"
     >
-        <button @click="switchOptions(false)" :class="{ 'font-semibold': !experiences }">Stays</button>
-        <button @click="switchOptions(true)" :class="{ 'font-semibold': experiences }">Experiences</button>
-        <nuxt-link to="/">Online Experiences</nuxt-link>
+        <button @click="switchOptions(false)" :class="[{ 'font-semibold': !experiences }]">Stays</button>
+        <button @click="switchOptions(true)" :class="[{ 'font-semibold': experiences }, 'text-gray-500']">Experiences</button>
+        <nuxt-link to="/" class="text-gray-500">Online Experiences</nuxt-link>
     </div>
 </template>
 
