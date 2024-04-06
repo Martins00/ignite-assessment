@@ -1,5 +1,5 @@
 <template>
-    <div class="top-[81px] sticky z-50 bg-white shadow-md">
+    <div class="sticky z-50 bg-white" :class="scrolledUp ? 'top-[5.4rem]' : 'top-[9.5rem]'">
         <div class="container mx-auto flex gap-6">
             <div class="relative flex-1 overflow-auto">
                 <div class="flex gap-x-4 rounded-full py-4 px-6 my-4 items-center shadow-lg lg:hidden">
@@ -100,4 +100,13 @@ const currentValue = ref(0)
 const goTo = (direction: 'next' | 'back') => {
 
 }
+
+
+const scrolledUp = ref(false);
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    scrolledUp.value = window.scrollY > 0;
+  });
+});
 </script>
